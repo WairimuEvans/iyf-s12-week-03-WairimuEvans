@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Practice CSS box model concepts including content, padding, borders, and margins.">
+    <title>Box Model Practice | Evans</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>CSS Box Model Practice</h1>
+        <p>Learning how content, padding, borders, and margins work.</p>
+    </header>
+
+    <main>
+    <section class="box-model-visualization" aria-labelledby="visualization-heading">
+        <h2 id="visualization-heading">Box Model Visualization</h2>
+        <p>Compare the content, padding, border, and margin of each box.</p>
+
+        <ol>
+            <li>
+                <figure class="box-example box-example-content">
+                    <figcaption>Content</figcaption>
+                </figure>
+            </li>
+            <li>
+                <figure class="box-example box-example-padding">
+                    <figcaption>Padding</figcaption>
+                </figure>
+            </li>
+            <li>
+                <figure class="box-example box-example-border">
+                    <figcaption>Border</figcaption>
+                </figure>
+            </li>
+            <li>
+                <figure class="box-example box-example-margin">
+                    <figcaption>Margin</figcaption>
+                </figure>
+            </li>
+        </ol>
+    </section>
+
+    <section aria-labelledby="debug-heading">
+        <h2 id="debug-heading">Debug the Layout</h2>
+        <p>The box below must have a total width of exactly 300px.</p>
+
+        <p class="broken-box">300px total width</p>
+    </section>
+
+    <section aria-labelledby="card-heading">
+        <h2 id="card-heading">Card Component</h2>
+
+        <article class="practice-card">
+            <img
+                src="https://placehold.co/600x300"
+                alt="Placeholder image for the box model practice card"
+                width="600"
+                height="300"
+            >
+
+            <h3>My First Card</h3>
+
+            <p>
+                This card demonstrates how content, padding, borders,
+                and box sizing work together.
+            </p>
+
+            <button type="button">Learn More</button>
+        </article>
+    </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Evans Wairimu</p>
+    </footer>
+</body>
+</html>

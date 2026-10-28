@@ -1,0 +1,814 @@
+/* ========================================
+   1. GOOGLE FONTS
+   ======================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Roboto:wght@400;500;600;700&display=swap');
+
+
+/* ========================================
+   2. CSS RESET
+   ======================================== */
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+
+/* ========================================
+   3. COLOUR, TYPOGRAPHY AND SPACING VARIABLES
+   ======================================== */
+
+:root {
+    /* Colour palette */
+    --color-primary: #2563eb;
+    --color-primary-light: #dbeafe;
+    --color-primary-dark: #1d4ed8;
+    --color-secondary: #475569;
+    --color-background: #f3f4f6;
+    --color-surface: #ffffff;
+    --color-text: #1f2937;
+    --color-muted: #6b7280;
+    --color-border: #d1d5db;
+
+    /* Font families */
+    --font-body: "Roboto", sans-serif;
+    --font-heading: "Poppins", sans-serif;
+
+    /* Typography scale */
+    --font-xs: 0.75rem;
+    --font-sm: 0.875rem;
+    --font-base: 1rem;
+    --font-lg: 1.125rem;
+    --font-xl: 1.25rem;
+    --font-2xl: 1.5rem;
+    --font-3xl: 1.875rem;
+    --font-4xl: 2.25rem;
+
+    /* Spacing */
+    --space-small: 0.5rem;
+    --space-medium: 1rem;
+    --space-large: 2rem;
+
+    /* Reusable design values */
+    --border-radius: 8px;
+    --transition-speed: 0.3s;
+    --content-width: 1100px;
+}
+
+
+/* ========================================
+   4. BASE TYPOGRAPHY
+   ======================================== */
+
+html {
+    font-size: 16px;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--font-body);
+    font-size: var(--font-base);
+    line-height: 1.6;
+    color: var(--color-text);
+    background-color: var(--color-background);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: var(--font-heading);
+    line-height: 1.2;
+    margin-bottom: var(--space-medium);
+}
+
+h1 {
+    font-size: var(--font-4xl);
+    font-weight: 700;
+}
+
+h2 {
+    font-size: var(--font-3xl);
+    font-weight: 600;
+}
+
+h3 {
+    font-size: var(--font-2xl);
+    font-weight: 600;
+}
+
+h4 {
+    font-size: var(--font-xl);
+    font-weight: 600;
+}
+
+h5 {
+    font-size: var(--font-lg);
+    font-weight: 500;
+}
+
+h6 {
+    font-size: var(--font-base);
+    font-weight: 500;
+}
+
+p {
+    margin-bottom: var(--space-medium);
+}
+
+small {
+    font-size: var(--font-sm);
+}
+
+ul,
+ol {
+    padding-left: 1.5rem;
+    margin-bottom: var(--space-medium);
+}
+
+li {
+    margin-bottom: var(--space-small);
+}
+
+
+/* ========================================
+   5. LINKS AND FOCUS STATES
+   ======================================== */
+
+a {
+    color: var(--color-primary);
+    text-decoration: none;
+    transition: color var(--transition-speed) ease;
+}
+
+a:hover {
+    color: var(--color-primary-dark);
+    text-decoration: underline;
+}
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible {
+    outline: 3px solid var(--color-primary);
+    outline-offset: 3px;
+}
+
+
+/* ========================================
+   6. IMAGES AND FORM ELEMENTS
+   ======================================== */
+
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+button,
+input,
+textarea,
+select {
+    font: inherit;
+}
+
+button {
+    cursor: pointer;
+}
+
+
+/* ========================================
+   7. BASIC PAGE LAYOUT
+   ======================================== */
+
+main {
+    width: min(100% - 2rem, var(--content-width));
+    margin-inline: auto;
+    padding-block: var(--space-large);
+}
+
+section {
+    margin-bottom: var(--space-large);
+}
+
+.container {
+    width: min(100% - 2rem, var(--content-width));
+    margin-inline: auto;
+    padding-block: var(--space-large);
+}
+
+body > header,
+body > footer {
+    padding: var(--space-large) 1rem;
+    text-align: center;
+}
+
+
+/* ========================================
+   8. NAVIGATION — FLEXBOX
+   ======================================== */
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: var(--space-medium);
+    padding: var(--space-medium) 1rem;
+    background-color: var(--color-primary-dark);
+}
+
+nav ul {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+    gap: var(--space-medium);
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav li {
+    margin: 0;
+}
+
+nav a {
+    color: var(--color-surface);
+    font-weight: 500;
+    transition: color var(--transition-speed) ease;
+}
+
+nav a:hover {
+    color: var(--color-primary-light);
+    text-decoration: underline;
+}
+
+
+/* ========================================
+   9. HEADER AND FOOTER STYLES
+   ======================================== */
+
+header h1 {
+    color: var(--color-text);
+}
+
+header p {
+    color: var(--color-muted);
+}
+
+footer {
+    background-color: var(--color-secondary);
+    color: var(--color-surface);
+}
+
+footer p {
+    margin-bottom: 0;
+}
+
+footer a {
+    color: var(--color-primary-light);
+}
+
+footer a:hover {
+    color: var(--color-surface);
+}
+
+
+/* ========================================
+   10. GENERAL CARD STYLES
+   ======================================== */
+
+.card {
+    width: 300px;
+    max-width: 100%;
+    padding: 20px;
+    border: 2px solid var(--color-border);
+    margin: var(--space-large);
+    background-color: var(--color-surface);
+    border-radius: var(--border-radius);
+}
+
+.card h2 {
+    color: var(--color-primary);
+}
+
+
+/* ========================================
+   11. BOX MODEL VISUALIZATION
+   ======================================== */
+
+.box-model-visualization ol {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: var(--space-medium);
+    list-style-position: inside;
+}
+
+.box-model-visualization li {
+    padding: var(--space-small);
+    background-color: var(--color-surface);
+    border-radius: var(--border-radius);
+}
+
+.box-example {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 120px;
+    margin-top: var(--space-small);
+    background-color: #bfdbfe;
+    text-align: center;
+}
+
+.box-example figcaption {
+    font-weight: 600;
+}
+
+.box-example-content {
+    padding: 0;
+    border: none;
+}
+
+.box-example-padding {
+    padding: 20px;
+    border: none;
+    background-color: #93c5fd;
+}
+
+.box-example-border {
+    padding: 20px;
+    border: 5px solid var(--color-primary-dark);
+}
+
+.box-example-margin {
+    padding: 20px;
+    border: 2px solid var(--color-primary-dark);
+    margin: 20px;
+}
+
+
+/* ========================================
+   12. BOX MODEL DEBUGGING EXERCISE
+   ======================================== */
+
+.broken-box {
+    width: 300px;
+    max-width: 100%;
+    padding: 20px;
+    border: 1px solid var(--color-primary-dark);
+    margin-block: var(--space-medium);
+    background-color: var(--color-primary-light);
+    text-align: center;
+}
+
+
+/* ========================================
+   13. PRACTICE CARD COMPONENT
+   ======================================== */
+
+.practice-card {
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    max-width: 100%;
+    padding: 20px;
+    border: 1px solid var(--color-border);
+    border-radius: var(--border-radius);
+    background-color: var(--color-surface);
+    box-shadow: 0 2px 6px rgb(0 0 0 / 8%);
+    transition:
+        box-shadow var(--transition-speed) ease,
+        transform var(--transition-speed) ease;
+}
+
+.practice-card img {
+    width: 100%;
+    height: auto;
+    margin-bottom: var(--space-medium);
+    border-radius: 4px;
+}
+
+.practice-card h3 {
+    margin-bottom: 15px;
+    color: var(--color-primary-dark);
+}
+
+.practice-card p {
+    flex-grow: 1;
+}
+
+.practice-card button {
+    align-self: flex-start;
+    padding: 0.65rem 1rem;
+    border: none;
+    border-radius: 4px;
+    background-color: var(--color-primary);
+    color: var(--color-surface);
+    transition:
+        background-color var(--transition-speed) ease,
+        transform var(--transition-speed) ease;
+}
+
+.practice-card button:hover {
+    background-color: var(--color-primary-dark);
+    transform: translateY(-2px);
+}
+
+.practice-card:hover {
+    box-shadow: 0 8px 18px rgb(0 0 0 / 12%);
+    transform: translateY(-3px);
+}
+
+
+/* ========================================
+   14. FLEXBOX CARD LAYOUT
+   ======================================== */
+
+.card-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    flex-wrap: wrap;
+    gap: var(--space-large);
+}
+
+.card-container .card {
+    flex: 1 1 250px;
+    width: auto;
+    min-width: 0;
+    max-width: 100%;
+    margin: 0;
+}
+
+
+/* ========================================
+   15. FLEXBOX FOOTER LAYOUT
+   ======================================== */
+
+footer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: var(--space-large);
+    padding: var(--space-large);
+}
+
+footer section {
+    flex: 1 1 180px;
+    margin-bottom: 0;
+}
+
+footer h2,
+footer h3 {
+    color: var(--color-surface);
+}
+
+footer .copyright {
+    flex-basis: 100%;
+    text-align: center;
+    padding-top: var(--space-medium);
+    border-top: 1px solid rgb(255 255 255 / 25%);
+}
+
+
+/* ========================================
+   16. CSS GRID — PHOTO GALLERY
+   ======================================== */
+
+.photo-gallery {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: var(--space-medium);
+}
+
+.photo-gallery img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    border-radius: var(--border-radius);
+}
+
+
+/* ========================================
+   17. CSS GRID — PROJECTS PAGE
+   ======================================== */
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: var(--space-large);
+    align-items: stretch;
+}
+
+.projects-grid .card {
+    width: auto;
+    min-width: 0;
+    max-width: none;
+    margin: 0;
+}
+
+
+/* ========================================
+   18. HERO SECTION
+   ======================================== */
+
+.hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--space-large);
+    padding-block: var(--space-large);
+}
+
+.hero-content {
+    width: 100%;
+}
+
+.hero-content h1 {
+    color: var(--color-primary-dark);
+}
+
+.hero-button {
+    display: inline-block;
+    padding: 0.75rem 1.25rem;
+    border-radius: var(--border-radius);
+    background-color: var(--color-primary);
+    color: var(--color-surface);
+    transition: background-color var(--transition-speed) ease;
+}
+
+.hero-button:hover {
+    background-color: var(--color-primary-dark);
+    color: var(--color-surface);
+    text-decoration: none;
+}
+
+.hero-image {
+    width: 100%;
+    max-width: 500px;
+}
+
+.hero-image img {
+    width: 100%;
+    border-radius: var(--border-radius);
+}
+
+
+/* ========================================
+   19. CONTACT FORM AND SIDEBAR
+   ======================================== */
+
+.contact-layout {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--space-large);
+}
+
+.contact-form-section form {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-small);
+}
+
+.contact-form-section label {
+    font-weight: 600;
+}
+
+.contact-form-section input,
+.contact-form-section textarea {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid var(--color-border);
+    border-radius: 4px;
+    background-color: var(--color-surface);
+    color: var(--color-text);
+}
+
+.contact-form-section textarea {
+    resize: vertical;
+}
+
+.contact-form-section button {
+    align-self: flex-start;
+    margin-top: var(--space-small);
+}
+
+/* Contact information sidebar */
+.contact-sidebar {
+    padding: var(--space-large);
+    border-radius: var(--border-radius);
+    background-color: #e0f2ee;
+    color: var(--color-text);
+}
+
+.contact-sidebar h2 {
+    color: #1e3a5f;
+    font-size: var(--font-2xl);
+    font-weight: 700;
+    margin-bottom: var(--space-medium);
+}
+
+.contact-sidebar p {
+    color: #374151;
+    margin-bottom: var(--space-medium);
+}
+
+.contact-sidebar a {
+    color: #0f766e;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+}
+
+.contact-sidebar a:hover {
+    color: #115e59;
+}
+
+
+/* ========================================
+   20. RESPONSIVE LAYOUTS
+   ======================================== */
+
+/* Tablet and desktop */
+@media (min-width: 768px) {
+    .hero {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .hero-content,
+    .hero-image {
+        flex: 1 1 0;
+        min-width: 0;
+    }
+
+    .contact-layout {
+        grid-template-columns: 2fr 1fr;
+        align-items: start;
+    }
+}
+
+/* Tablet: two project columns */
+@media (min-width: 768px) and (max-width: 1024px) {
+    .projects-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+/* Mobile */
+@media (max-width: 767px) {
+    h1 {
+        font-size: var(--font-3xl);
+    }
+
+    h2 {
+        font-size: var(--font-2xl);
+    }
+
+    .box-model-visualization ol {
+        grid-template-columns: 1fr;
+    }
+
+    .projects-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .photo-gallery {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .photo-gallery img {
+        height: 180px;
+    }
+
+    .card {
+        margin: var(--space-medium) auto;
+    }
+
+    .card-container .card {
+        flex-basis: 100%;
+    }
+
+    nav {
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    nav ul {
+        justify-content: center;
+        gap: var(--space-small);
+    }
+
+    footer {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    footer section {
+        flex-basis: auto;
+        width: 100%;
+    }
+
+    footer .copyright {
+        width: 100%;
+    }
+}
+
+/* ========================================
+   21. REUSABLE BUTTON STYLES
+   ======================================== */
+
+.button {
+    display: inline-block;
+    padding: 0.75rem 1.25rem;
+    border: none;
+    border-radius: var(--border-radius);
+    background-color: var(--color-primary);
+    color: var(--color-surface);
+    font-weight: 600;
+    text-align: center;
+    text-decoration: none;
+    transition:
+        background-color var(--transition-speed) ease,
+        transform var(--transition-speed) ease;
+}
+
+.button:hover {
+    background-color: var(--color-primary-dark);
+    color: var(--color-surface);
+    text-decoration: none;
+    transform: translateY(-2px);
+}
+
+.button:focus-visible {
+    outline: 3px solid var(--color-primary-dark);
+    outline-offset: 3px;
+}
+
+/* ========================================
+   22. FORM VALIDATION FEEDBACK
+   ======================================== */
+
+.contact-form-section input:user-invalid,
+.contact-form-section textarea:user-invalid,
+.contact-form-section select:user-invalid {
+    border: 2px solid #dc2626;
+    background-color: #fef2f2;
+}
+
+.contact-form-section input:user-invalid:focus,
+.contact-form-section textarea:user-invalid:focus,
+.contact-form-section select:user-invalid:focus {
+    outline: 3px solid #fecaca;
+    outline-offset: 2px;
+}
+
+/* ========================================
+   23. CONTACT FORM SUBMIT BUTTON
+   ======================================== */
+
+.contact-form-section button {
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: var(--border-radius);
+    background-color: var(--color-primary);
+    color: var(--color-surface);
+    font-weight: 600;
+    transition:
+        background-color var(--transition-speed) ease,
+        transform var(--transition-speed) ease;
+}
+
+.contact-form-section button:hover {
+    background-color: var(--color-primary-dark);
+    transform: translateY(-2px);
+}
+
+/* ========================================
+   24. NEWSLETTER CHECKBOX ALIGNMENT
+   ======================================== */
+
+.contact-form-section input[type="checkbox"] {
+    width: auto;
+    margin-right: 0.5rem;
+    vertical-align: middle;
+    accent-color: var(--color-primary);
+}
+
+.contact-form-section label:has(input[type="checkbox"]) {
+    display: flex;
+    align-items: center;
+    gap: var(--space-small);
+}
