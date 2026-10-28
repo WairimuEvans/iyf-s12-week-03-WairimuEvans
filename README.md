@@ -1,6 +1,6 @@
 # iyf-s12-week-3-WairimuEvans
 
-## Week 3 Progress
+## What I'm Learning
 
 - Command-line navigation and file management
 - Bash scripting
