@@ -71,7 +71,7 @@ Pending completion with my partner.
 
 ## Author
 
-IYF Weekend Academy — Season 12 participant.
+IYF Weekend Academy — Season 12 Jeff Evans.
 
 ## Portfolio
 
