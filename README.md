@@ -51,6 +51,24 @@ Replace `my-awesome-app` with your preferred project name.
 - Merge-conflict identification and resolution.
 - Ignoring unnecessary files with `.gitignore`.
 
+## Pair Programming
+
+**Partner:** Claire — [@gakuruclaire39-cmd](https://github.com/gakuruclaire39-cmd)
+
+**Pair Repository:** [Week 3 Pair Repository](https://github.com/gakuruclaire39-cmd/iyf-s12-week-03-pair-gakuruclaire39-cmd)
+
+### Contributions
+- Updated the pair repository documentation.
+- Created and pushed a feature branch.
+- Opened a pull request for collaborative review.
+- Partner reviewed and merged my pull request.
+
+### Pull Requests
+- [My contribution — PR #1](https://github.com/gakuruclaire39-cmd/iyf-s12-week-03-pair-gakuruclaire39-cmd/pull/1)
+
+### Merge Conflict Exercise
+Pending completion with my partner.
+
 ## Author
 
 IYF Weekend Academy — Season 12 participant.
